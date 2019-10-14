@@ -28,7 +28,7 @@ int main(int argc, char** argv)
         printf("Error: can't open in\n");
         return 0;
     }
-    int out = open(argv[2], O_CREAT, 0666);
+    int out = open(argv[2], O_WRONLY|O_CREAT, 0666);
     if(out < 0){
         printf("Error: can't open out\n");
         return 0;
